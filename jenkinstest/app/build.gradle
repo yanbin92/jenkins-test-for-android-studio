@@ -37,3 +37,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.3.0'
 }
 
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
