@@ -25,7 +25,7 @@ android {
             zipAlignEnabled false   //是否启动zipAlign
             shrinkResources false   //是否移除无用的resource文件
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-
+            signingConfig signingConfigs.release//打包命令行：gradlew assembleRelease
             applicationVariants.all { variant ->
                 if (variant.buildType.name.equals('release')) {
                     variant.outputs.each { output ->
@@ -38,6 +38,9 @@ android {
                 }
             }
         }
+    }
+    lintOptions {//设置编译的lint开关，程序在buid的时候，会执行lint检查，有任何的错误或者警告提示，都会终止构建
+        abortOnError false
     }
 
 }
