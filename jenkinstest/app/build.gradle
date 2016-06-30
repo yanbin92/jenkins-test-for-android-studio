@@ -9,7 +9,7 @@ android {
         minSdkVersion 14
         targetSdkVersion 23
         versionCode 1
-        versionName "1.0.4"
+        versionName "1.0.5"
     }
     signingConfigs {//签名的配置
         release {
@@ -32,7 +32,7 @@ android {
                         def outputFile = output.outputFile
                         if (outputFile != null && outputFile.name.endsWith('.apk')) {
                             def fileName = "gradle.apk"
-output.                     outputFile = new File("/Users/lilin/Downloads/APK", fileName)
+                            output.outputFile = new File("/Users/lilin/Downloads/APK", fileName)
                         }
                     }
                 }
