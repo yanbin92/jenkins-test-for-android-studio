@@ -31,7 +31,7 @@ android {
                     variant.outputs.each { output ->
                         def outputFile = output.outputFile
                         if (outputFile != null && outputFile.name.endsWith('.apk')) {
-                            def fileName = "gradle.apk"
+                            def fileName = "${releaseTime()}_com.andli.myproject_${defaultConfig.versionName}.apk"
                             output.outputFile = new File("/Users/lilin/Downloads/APK", fileName)
                         }
                     }
@@ -52,6 +52,5 @@ dependencies {
 }
 
 def releaseTime() {
-    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("GMT+:08:00"))
 }
-
