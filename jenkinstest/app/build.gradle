@@ -52,5 +52,5 @@ dependencies {
 }
 
 def releaseTime() {
-    return new Date().format("yyyyMMdd HH:mm:ss", TimeZone.getTimeZone("Asia/Chongqing"))
+    return new Date().format("yyyyMMdd HH:mm:ss", TimeZone.getTimeZone("Asia/BeiJing"))
 }
